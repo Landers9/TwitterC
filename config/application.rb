@@ -11,7 +11,7 @@ module Tweets
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
-    config.time_zone = "Afrique/Monrovia"
+    config.time_zone = 'Europe/Paris'
     config.active_record.default_timezone = :local
 
   end
