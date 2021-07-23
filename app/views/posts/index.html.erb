@@ -1,0 +1,14 @@
+<% @posts.each do |post| %>
+
+  <div class="col-sm-6 mb-2">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Post <%= post.id %></h5>
+        <p class="card-text"><%= post.content %></p>
+        <a href="<%= edit_post_path(post.id) %>" class="btn btn-primary">Editer Post</a>
+        <a href="<%= post_path(post.id) %>" data-confirm="etes vous sur ?" data-method="DELETE" class="btn btn-danger">Delete Post</a>
+      </div>
+    </div>
+  </div>
+
+<% end %>

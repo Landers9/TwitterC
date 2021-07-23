@@ -1,0 +1,15 @@
+<div class="col-sm-12">
+  <div class="card">
+    <h4 class="card-header">You confirm this action ?</h4>
+    <div class="card-body">
+      <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+      <%= form.hidden_field :content %>
+
+      <p>Content : <%= @post.content %></p>
+      <%= form.submit :Confirm, class: "btn btn-primary text-light text-center "%>
+      <%= link_to 'Cancel', new_post_path, class: "btn btn-danger text-light text-center ml-2"%>
+
+      <% end %>
+    </div>
+  </div>
+</div>

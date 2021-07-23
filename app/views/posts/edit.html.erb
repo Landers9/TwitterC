@@ -1,0 +1,30 @@
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      Update Post
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <%= form_with(model: @post, local: true) do |form| %>
+            <% if @post.errors.any? %>
+              <div id="error_explanation">
+                <ul>
+                  <% @post.errors.full_messages.each do |message| %>
+                  <li class=" card bg-danger inline mr-5 error-msg "><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <%end %>
+            <div class="field form-group">
+              <%= form.label :content %>&nbsp;:
+              <%= form.text_area :content ,class: "form-control" %>
+            </div>
+            <div class="actions">
+              <%= form.submit  class: "btn btn-primary text-light text-center"%>
+              <%= link_to 'Back', posts_path, class: " btn btn-danger   text-light text-center" %>
+            </div>
+        <% end %>
+      </p>
+    </div>
+  </div>
+</div>
